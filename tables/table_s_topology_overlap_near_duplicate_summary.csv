@@ -1,0 +1,5 @@
+layer,sample_stratum,sampled_cell_count,sampled_unit_count,summed_equal_area_m2,union_equal_area_m2,within_cell_overlap_excess_pct_of_sum,near_duplicate_candidate_pair_count,confirmed_near_duplicate_pair_count,scope_limit
+2024,deterministic_hash,10,15049,195425697.2806549,195425697.28065518,0.0,0,0,Selected-cell diagnostic for local concentration and near-duplicates; see the separate exhaustive tiled national union
+2024,highest_density,10,149015,327588431.30853635,327588431.30853623,3.63899570795603e-14,0,0,Selected-cell diagnostic for local concentration and near-duplicates; see the separate exhaustive tiled national union
+2025,deterministic_hash,10,34474,280139378.2909403,280139378.2909303,3.574499373617502e-12,0,0,Selected-cell diagnostic for local concentration and near-duplicates; see the separate exhaustive tiled national union
+2025,highest_density,10,154953,294211027.8075489,294211027.80754906,0.0,0,0,Selected-cell diagnostic for local concentration and near-duplicates; see the separate exhaustive tiled national union

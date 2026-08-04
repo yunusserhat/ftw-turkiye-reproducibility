@@ -1,0 +1,60 @@
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+
+# The country extract and DuckDB cleaning cache are reproducible, but too large for Git.
+data/raw/*.parquet
+data/interim/
+
+# Temporary Natural Earth download archive; the compact Türkiye extract is retained.
+data/external/*.zip
+
+# Rights-restricted HGM source/derived boundary material is generated and used locally.
+# The publisher-safe snapshot carries hashes and derivation instructions, not these files.
+data/external/il_ilce_alanlari_2026_hgm.xlsx
+data/external/hgm_turkiye_mulki_idare_sinirlari_2026.rar
+data/external/hgm_2026_province_boundaries_wgs84.geojson
+data/external/hgm_2026_province_boundaries_metadata.json
+data/external/hgm_2026_country_face_selection_audit.csv
+data/external/hgm_2026_component_assignment_audit.csv
+
+# Auxiliary geoBoundaries files were retained only for the independent boundary audit;
+# they are not required by the final HGM-only derivation or redistributed.
+data/external/geoboundaries_tur_adm0_2021.geojson
+data/external/geoboundaries_tur_adm1_2021.geojson
+
+# Locally built submission/review archives are regenerated deterministically.
+release/
+
+# Third-party paper full texts — retained locally for citation checking, not redistributable.
+dataset_papers/
+
+# Internal working documents — simulated review, pushback register, outstanding-items log,
+# pre-submission self-assessment, rights-request drafts and editorial correspondence.
+manuscript/revision_roadmap.md
+manuscript/response_to_reviewers_skeleton.md
+manuscript/OUTSTANDING.md
+manuscript/earth_science_informatics_degerlendirme.md
+manuscript/hgm_izin_talebi_taslagi.md
+manuscript/revision_change_log.md
+manuscript/cover_letter.tex
+
+# Publisher LaTeX template files retain their own notices and are obtained from Springer
+# Nature rather than redistributed here. See manuscript/TEMPLATE_PROVENANCE.md.
+manuscript/sn-jnl.cls
+manuscript/sn-basic.bst
+manuscript/bst/
+manuscript/sn-article.tex
+manuscript/sn-article.pdf
+manuscript/user-manual.pdf
+manuscript/empty.eps
+manuscript/fig.eps
+
+# Locally compiled manuscript build products.
+manuscript/*.pdf
+manuscript/*.log
+manuscript/*.blg
+manuscript/*.aux
+manuscript/*.bbl
+manuscript/*.out

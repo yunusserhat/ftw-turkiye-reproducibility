@@ -1,0 +1,213 @@
+{
+  "code_revision": "42fd5ab1e4a4fcc97d6222f0a4ef906a713d1624+working-tree;notebook-source-sha256:aeaa2dd72f621e8cfe2504ebe99440dccacaea717397b61939c9dca018cd8235;helpers-sha256:d84cfca6bef42b37690d1845dfbf5652a13f6d6cd250ce154f6478d794a9232f;requirements-lock-sha256:21dea57ffcc964bb20e0cd06d6f98cbf7cdb2878cc0a94c97dfa272dece5f35d;protocol-schema-sha256:7c15033edecd8fa29a7d0049c49a613a38cdab36cd83a522aa21c5489ce9fbe5",
+  "created_at": "2026-08-01T00:00:00Z",
+  "final_action": "adopt_with_restrictions",
+  "final_rationale": "The pinned extract and executable audit support descriptive characterisation of the delivered annual/seasonal-crop mapped units only. Threshold sensitivity, sparse confidence coverage, absent Türkiye ground truth, cross-layer offsets and conditional HGM redistribution prohibit completeness, change or operational claims.",
+  "intended_use": {
+    "decision_context": "Low-stakes, reversible characterisation of distributed model outputs; do not make operational, legal, subsidy, insurance or enforcement decisions",
+    "mandatory_requirements": [
+      "immutable source provenance",
+      "explicit target ontology and use restrictions",
+      "exhaustive geometry and administrative-scope audit",
+      "threshold, topology, confidence and cross-layer sensitivity evidence"
+    ],
+    "prohibited_inferences": [
+      "cadastral or legal parcel status",
+      "complete agricultural area or omission rate",
+      "observed agricultural change between layers",
+      "high-consequence decisions without independent local validation"
+    ],
+    "risk_level": "low",
+    "use_statement": "Pre-validation descriptive product audit and research prioritisation for the Türkiye extract"
+  },
+  "product": {
+    "excluded_classes": [
+      "cadastral parcels",
+      "holdings",
+      "farms",
+      "ownership units",
+      "permanent grassland",
+      "pasture",
+      "orchards",
+      "vineyards",
+      "fallow",
+      "forestry",
+      "perennial crops",
+      "tree crops"
+    ],
+    "immutable_input_identifier": "s3-version:xenG_6E1OYHASAduQdF4GQVAaWhx9Z.S;sha256:423c5e780d26c2bfc0a1c84bcf9b68029452be8a0e524a4395fde9c5d745774d",
+    "included_classes": [
+      "seasonal crop fields",
+      "annual crop fields"
+    ],
+    "name": "Fields of The World Türkiye nominal 2024/2025 seasonal/annual-crop mapped-unit predictions",
+    "target_ontology": "AI-detected seasonal/annual-crop mapped units",
+    "version": "alpha"
+  },
+  "protocol_version": "1.1.0",
+  "record_id": "ftw-turkiye-alpha-descriptive-audit-2026-08-01",
+  "restrictions": [
+    "Characterise the pinned distributed output only; do not infer ground accuracy or completeness",
+    "Report all area-floor and topology scenarios; do not treat absolute count or median as threshold-invariant",
+    "Apply confidence thresholds only within the documented non-null coverage subset",
+    "Do not infer agricultural change, cadastral status, registry status or rights-affecting eligibility",
+    "Do not redistribute HGM-dependent material through a commercial publisher until written rights clearance"
+  ],
+  "stages": [
+    {
+      "acceptance_criterion": "Use is reversible and explicitly excludes high-consequence decisions without local validation",
+      "allowed_action": "continue",
+      "applicability": "mandatory",
+      "evidence_artifacts": [
+        "README.md",
+        "ftw_turkiye_eda.ipynb"
+      ],
+      "evidence_required": "Named decision, affected users, error costs, and acceptable residual uncertainty",
+      "notes": "Proceed with due diligence; retain all use restrictions",
+      "observed_evidence": "Notebook and README limit every result to descriptive product characterisation",
+      "outcome": "pass",
+      "stage_id": 0,
+      "stage_name": "Intended-use and risk gate"
+    },
+    {
+      "acceptance_criterion": "All required provenance fields are recorded and target exclusions constrain interpretation",
+      "allowed_action": "continue_with_restriction",
+      "applicability": "mandatory",
+      "evidence_artifacts": [
+        "tables/table_s_product_extract_characteristics.csv",
+        "tables/table_s_provider_recipe_provenance.csv"
+      ],
+      "evidence_required": "Immutable source, licence, target ontology, exclusions, spatial/temporal scope, evaluation domain",
+      "notes": "Characterise annual/seasonal-crop mapped units only; do not infer total agriculture or completeness",
+      "observed_evidence": "Raw SHA-256 423c5e780d26c2bfc0a1c84bcf9b68029452be8a0e524a4395fde9c5d745774d; Türkiye absent from 24 evaluation countries; perennial/tree crops, pasture, and orchards excluded by target ontology",
+      "outcome": "pass",
+      "stage_id": 1,
+      "stage_name": "Discovery, ontology, and provenance"
+    },
+    {
+      "acceptance_criterion": "Expected rows/layers/fields; no null/empty/invalid analysis geometry; every retained row resolves to a Turkish province",
+      "allowed_action": "continue_with_restriction",
+      "applicability": "mandatory",
+      "evidence_artifacts": [
+        "tables/table_s0_schema.csv",
+        "tables/table_s_geometry_type_qc.csv",
+        "tables/table_s_geometry_quality.csv",
+        "tables/table_s_subdivision_spatial_assignment_summary.csv",
+        "tables/table_s_provider_to_spatial_subdivision_crosswalk.csv"
+      ],
+      "evidence_required": "Row/schema assertions, exhaustive validity audit, deterministic administrative reconciliation",
+      "notes": "Use the pinned HGM-derived 2026 province framework for descriptive aggregation; preserve provider-code crosswalk, Natural Earth sensitivity, and exclusion ledger; prohibit operational boundary decisions",
+      "observed_evidence": "29,258,428 expected source rows; validity assertions passed; every final row assigned by point-on-surface; provider numeric codes disagreed for 310,842 assigned rows and were not used for aggregation",
+      "outcome": "pass",
+      "stage_id": 2,
+      "stage_name": "Schema, scope, and geometry integrity"
+    },
+    {
+      "acceptance_criterion": "Median remeasured/provider area and perimeter ratios within 0.1% of one",
+      "allowed_action": "continue",
+      "applicability": "mandatory",
+      "evidence_artifacts": [
+        "tables/table_s1_provider_metric_spot_check.csv",
+        "tables/table_s_polygon_holes_by_layer.csv"
+      ],
+      "evidence_required": "Deterministic spheroidal remeasurement including holes, stratified by layer and hole status",
+      "notes": "Use provider area and perimeter for aggregate shape summaries",
+      "observed_evidence": "Maximum median-ratio deviation 2.38e-09; 3,552,813 retained polygons contain interior rings",
+      "outcome": "pass",
+      "stage_id": 3,
+      "stage_name": "Metric semantics and ring-aware verification"
+    },
+    {
+      "acceptance_criterion": "Headline distribution levels remain within declared tolerances and summed area is distinguished from exact unique mapped surface",
+      "allowed_action": "continue_with_restriction",
+      "applicability": "mandatory",
+      "evidence_artifacts": [
+        "tables/table_s_exact_wkb_duplicate_digest_audit.csv",
+        "tables/table_s_exact_wkb_duplicate_provider_code_conflicts.csv",
+        "tables/table_s_area_floor_sensitivity.csv",
+        "tables/table_s_outlier_area_bands.csv",
+        "tables/table_s_province_summed_area_rank_cap_sensitivity_summary.csv",
+        "tables/table_s_bbox_geometry_consistency.csv",
+        "tables/table_s_national_union_overlap.csv",
+        "tables/table_s_topology_overlap_near_duplicate_summary.csv"
+      ],
+      "evidence_required": "0/50/100/200/400/800 m2 sensitivity, exact duplicates, outlier bands/caps, province-rank cap sensitivity, exhaustive tiled national union, and selected-cell near-duplicate screen",
+      "notes": "Report threshold scenarios and robust ordering only; do not present threshold-sensitive medians or uncapped summed areas as invariant truth",
+      "observed_evidence": "As-distributed population is primary. At 400 m2 retained counts are 11,106,679/11,424,442; count and median shifts exceed 5% case tolerances; total-area shift is evaluated against 0.1% and small-unit share against 3 percentage points; >=100 ha components carry large summed-area shares",
+      "outcome": "fail",
+      "stage_id": 4,
+      "stage_name": "Population definition, thresholds, duplicates, and topology"
+    },
+    {
+      "acceptance_criterion": "All aggregation keys and denominators resolve; maps remain descriptive of target-specific predictions",
+      "allowed_action": "continue_with_restriction",
+      "applicability": "mandatory",
+      "evidence_artifacts": [
+        "tables/table_3_province_metrics_2024.csv",
+        "tables/table_s_province_area_denominator_comparison.csv",
+        "tables/table_s13_density_grid_2024_2025.csv"
+      ],
+      "evidence_required": "Complete province lookup, authoritative denominator, alternative-boundary sensitivity, explicit grid assignment",
+      "notes": "Use province/grid patterns descriptively; require independent reference data for omission or coverage claims",
+      "observed_evidence": "81-province HGM-derived reporting geometry and HGM area-workbook denominator reconcile; Natural Earth sensitivity is exported; grid uses bbox midpoint in half-open 0.1-degree bins; no external crop mask establishes completeness",
+      "outcome": "indeterminate",
+      "stage_id": 5,
+      "stage_name": "Spatial aggregation and denominator provenance"
+    },
+    {
+      "acceptance_criterion": "A national confidence filter is allowed only if coverage is representative and null semantics are resolved",
+      "allowed_action": "continue_with_restriction",
+      "applicability": "mandatory",
+      "evidence_artifacts": [
+        "tables/table_4_confidence_coverage_sensitivity_2024_2025.csv",
+        "tables/table_s_confidence_metadata_verification.csv"
+      ],
+      "evidence_required": "Pinned metadata semantics, coverage for every layer, spatial diagnostic, threshold sensitivity",
+      "notes": "Report coverage and covered-subset sensitivity only; prohibit national confidence filtering",
+      "observed_evidence": "Non-null coverage is 2.71% (2024) and 2.70% (2025); null means outside coverage",
+      "outcome": "fail",
+      "stage_id": 6,
+      "stage_name": "Confidence semantics and coverage"
+    },
+    {
+      "acceptance_criterion": "Change inference requires observation dates and independent temporal reference; descriptive census statistics carry no bootstrap significance claim",
+      "allowed_action": "continue_with_restriction",
+      "applicability": "mandatory",
+      "evidence_artifacts": [
+        "tables/table_5_cross_layer_consistency_2024_2025.csv",
+        "tables/table_s_grid_cross_layer_consistency_0_1deg.csv",
+        "tables/table_s_cross_layer_size_band_decomposition.csv"
+      ],
+      "evidence_required": "Province- and 0.1-degree-grid-level association, agreement, offsets, ratios, and size bands",
+      "notes": "Describe cross-layer consistency/offsets only; prohibit agricultural-change attribution",
+      "observed_evidence": "National count offset +6.61% and summed-area offset +2.13%; province and occupied-grid descriptive agreement statistics generated",
+      "outcome": "indeterminate",
+      "stage_id": 7,
+      "stage_name": "Cross-layer consistency"
+    },
+    {
+      "acceptance_criterion": "All assertions pass in one fresh run, every generated artifact is hashed, and public redistribution rights are documented",
+      "allowed_action": "continue_with_restriction",
+      "applicability": "mandatory",
+      "evidence_artifacts": [
+        "data/download_tr.sh",
+        "data/external/README.md",
+        "tables/table_s0_reproducibility_environment.csv",
+        "tables/artifact_manifest.csv"
+      ],
+      "evidence_required": "Immutable hashes/version IDs, fixed access date, clean execution, deterministic seeds, complete artifact manifest, and distributable dependencies",
+      "notes": "Share a review snapshot only subject to HGM terms/permission; for a public archive obtain written permission or require users to derive the HGM input locally",
+      "observed_evidence": "Immutable FTW input SHA verified; access date fixed at 2026-07-18; HGM-derived reporting geometry is reproducible and hashed, but its non-commercial/attribution terms make public redistribution conditional on written permission or user-supplied derivation",
+      "outcome": "indeterminate",
+      "stage_id": 8,
+      "stage_name": "Reproducibility and decision hand-off"
+    }
+  ],
+  "unresolved_evidence_gaps": [
+    "No independent Türkiye field-boundary ground truth or completeness reference",
+    "Provider extraction-recipe wording remains internally inconsistent",
+    "Confidence coverage is sparse and null outside modelled-confidence coverage",
+    "Observation dates needed for agricultural-change inference are unavailable",
+    "Public redistribution of the HGM-derived boundary input remains permission-conditioned"
+  ]
+}

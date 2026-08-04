@@ -1,0 +1,32 @@
+characteristic,value,unit_or_note
+Product,Global Fields of The World (FTW) field-boundary predictions,
+Extract,ftw_turkiye.parquet,
+Immutable S3 version ID,xenG_6E1OYHASAduQdF4GQVAaWhx9Z.S,source object
+Raw byte length,5907043512,bytes
+Raw SHA-256,423c5e780d26c2bfc0a1c84bcf9b68029452be8a0e524a4395fde9c5d745774d,verified before analysis
+Data version,alpha,
+Access date,2026-07-18,
+Source row count,29258428,rows
+Expected row-count QC,True,
+Geometry CRS,OGC:CRS84,longitude-latitude
+Observed annual layer labels,2,distinct values
+Observed determination method,auto-imagery,
+Observed country code,TR,
+Distinct non-null subdivision codes,91,codes
+Valid Turkish province codes observed,80,of 81
+Expected Turkish province code absent,53,53 is Rize
+Alphabetic cross-border suffixes observed,11,audited before analysis
+Null subdivision-code rows,0,rows
+Minimum provider area,74.14147186279297,m²
+Maximum provider area,348952032.0,m²
+Minimum provider perimeter,34.81700134277344,m
+Maximum provider perimeter,867167.875,m
+Bounding-box extent,"25.691974, 35.838492, 44.787751, 42.104757","xmin, ymin, xmax, ymax in degrees"
+Licence,CC-BY-4.0,provider attribution
+Primary reporting geometry,HGM 2026 Türkiye Mülki İdare Sınırları-derived 81-province geometry,point-on-surface assignment; indicative/non-legal
+Primary reporting geometry SHA-256,ae7734d90958810fae9718322788e2932290a7b7f0a9ab2affca0b3938d8c51e,verified before assignment
+HGM-only derivation,"HGM boundary lines, settlement points, province-area workbook, and pinned face manifest",no external boundary geometry used for face selection or labelling
+HGM boundary source access date,2026-07-31,fixed; never derived from execution day
+HGM area-workbook access date,2026-07-18,fixed; never derived from execution day
+HGM derivation audit,57/130 country faces selected; 353 province faces; 81 province geometries,face- and component-level ledgers are hash-verified
+Natural Earth Admin-1 reference,"Natural Earth 1:10m Admin 1 – States, Provinces; source release label not supplied; archive SHA-256 efc59726337323058f9446210adc96673179cd344e053666ee3d28cb58ba2b05; Türkiye derivative SHA-256 18a5afb0feb78423953fd7d210842cf8876c12d8cbd811b4fe92e64de9275283; https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_1_states_provinces.zip; accessed 2026-07-18",assignment sensitivity only

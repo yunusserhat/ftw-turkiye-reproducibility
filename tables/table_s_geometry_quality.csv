@@ -1,0 +1,7 @@
+stage,layer,row_count,null_geometry_count,empty_geometry_count,invalid_geometry_count,valid_geometry_count,scope_group,area_floor_removed_count,duplicate_removed_count,scope_excluded_count,duplicate_removed_pct_of_area_floor_rows,repair_applied,exclusion_rule
+Source extract,2024,14161143,0.0,0.0,0.0,14161143.0,all_provider_rows,0,0,0,0.0,False,None
+Source extract,2025,15097285,0.0,0.0,0.0,15097285.0,all_provider_rows,0,0,0,0.0,False,None
+Area floor and exact-WKB deduplication,2024,14140752,0.0,0.0,0.0,14140752.0,all_provider_rows,0,20391,0,0.1439926141555099,False,Area >= 0 m2; exact WKB deduplication within layer
+Area floor and exact-WKB deduplication,2025,15075815,0.0,0.0,0.0,15075815.0,all_provider_rows,0,21470,0,0.14221100018976923,False,Area >= 0 m2; exact WKB deduplication within layer
+Final HGM-derived province analysis,2024,14139788,0.0,0.0,0.0,14139788.0,analysis_scope,0,20391,964,0.1439926141555099,False,Area >= 0 m2; exact WKB deduplication; HGM-derived province point-on-surface assignment; no-match records excluded
+Final HGM-derived province analysis,2025,15075042,0.0,0.0,0.0,15075042.0,analysis_scope,0,21470,773,0.14221100018976923,False,Area >= 0 m2; exact WKB deduplication; HGM-derived province point-on-surface assignment; no-match records excluded

@@ -1,0 +1,9 @@
+layer,stage,field_count,source_field_count,percent_of_source,area_floor_m2
+2024,Source extract,14161143,14161143,100.0,0.0
+2025,Source extract,15097285,15097285,100.0,0.0
+2024,Area floor retained (≥ 0 m²),14161143,14161143,100.0,0.0
+2025,Area floor retained (≥ 0 m²),15097285,15097285,100.0,0.0
+2024,Exact-WKB duplicates removed,14140752,14161143,99.85600738584449,0.0
+2025,Exact-WKB duplicates removed,15075815,15097285,99.85778899981023,0.0
+2024,Reconciled Turkish province analysis scope,14139788,14161143,99.84920002573239,0.0
+2025,Reconciled Turkish province analysis scope,15075042,15097285,99.8526688739068,0.0

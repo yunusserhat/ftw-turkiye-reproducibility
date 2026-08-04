@@ -1,0 +1,9 @@
+layer,excluded_unit_area_at_or_above_ha,province_count,province_rank_spearman_rho,median_absolute_rank_shift,maximum_absolute_rank_shift,five_largest_shifts,interpretation
+2024,50.0,81,0.973486901535682,3.0,18.0,Niğde (+18); Karaman (+18); Van (+14); Şırnak (+13); Denizli (-12),descriptive cap sensitivity of province summed-area ordering; not evidence that any capped unit is erroneous
+2024,100.0,81,0.9823622402890695,2.0,16.0,Niğde (+16); Van (+13); Karaman (+12); Şırnak (+11); Denizli (-10),descriptive cap sensitivity of province summed-area ordering; not evidence that any capped unit is erroneous
+2024,500.0,81,0.9927732610659439,1.0,12.0,Niğde (+12); Karaman (+8); Şırnak (+7); Çankırı (+6); Erzurum (-6),descriptive cap sensitivity of province summed-area ordering; not evidence that any capped unit is erroneous
+2024,1000.0,81,0.9939927732610659,1.0,12.0,Niğde (+12); Karaman (+7); Şırnak (+7); Malatya (+6); Çankırı (+5),descriptive cap sensitivity of province summed-area ordering; not evidence that any capped unit is erroneous
+2025,50.0,81,0.9640469738030712,4.0,17.0,Van (+17); Kars (+13); Karaman (+13); Batman (+13); Gaziantep (+12),descriptive cap sensitivity of province summed-area ordering; not evidence that any capped unit is erroneous
+2025,100.0,81,0.9754516711833784,4.0,15.0,Van (+15); Batman (+13); Kars (+11); Mardin (+11); Balıkesir (-9),descriptive cap sensitivity of province summed-area ordering; not evidence that any capped unit is erroneous
+2025,500.0,81,0.9926603432700992,1.0,10.0,Batman (+10); Mardin (+7); Karaman (+7); Denizli (-6); Niğde (+6),descriptive cap sensitivity of province summed-area ordering; not evidence that any capped unit is erroneous
+2025,1000.0,81,0.9956187895212285,1.0,7.0,Batman (+7); Karaman (+6); Denizli (-5); Kahramanmaraş (+5); Niğde (+5),descriptive cap sensitivity of province summed-area ordering; not evidence that any capped unit is erroneous

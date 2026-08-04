@@ -1,0 +1,49 @@
+processing_stage,layer,original_code,interpreted_code,province_name,geographical_region,field_count,mapped_area_ha,mapping_status
+Source extract,2024,A,22,Edirne,Marmara,11,26.218803,Reassigned to Turkish province by point-on-surface
+Source extract,2024,A,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,2,5.019537,Excluded after point-on-surface audit
+Source extract,2024,AJ,75,Ardahan,Eastern Anatolia,2,131.89127,Reassigned to Turkish province by point-on-surface
+Source extract,2024,AR,30,Hakkâri,Eastern Anatolia,8,21.30304,Reassigned to Turkish province by point-on-surface
+Source extract,2024,AR,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,10,5.8121424,Excluded after point-on-surface audit
+Source extract,2024,HA,47,Mardin,Southeastern Anatolia,10,103.07991,Reassigned to Turkish province by point-on-surface
+Source extract,2024,HA,63,Şanlıurfa,Southeastern Anatolia,4,1055.3676,Reassigned to Turkish province by point-on-surface
+Source extract,2024,HA,73,Şırnak,Southeastern Anatolia,15,154.77174,Reassigned to Turkish province by point-on-surface
+Source extract,2024,HA,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,155,16543.557,Excluded after point-on-surface audit
+Source extract,2024,HL,27,Gaziantep,Southeastern Anatolia,4,228.7145,Reassigned to Turkish province by point-on-surface
+Source extract,2024,HL,31,Hatay,Mediterranean,2,131.54237,Reassigned to Turkish province by point-on-surface
+Source extract,2024,HL,63,Şanlıurfa,Southeastern Anatolia,7,788.1052,Reassigned to Turkish province by point-on-surface
+Source extract,2024,HL,79,Kilis,Southeastern Anatolia,15,182.50322,Reassigned to Turkish province by point-on-surface
+Source extract,2024,HL,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,193,5252.978,Excluded after point-on-surface audit
+Source extract,2024,ID,31,Hatay,Mediterranean,3,52.15237,Reassigned to Turkish province by point-on-surface
+Source extract,2024,ID,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,13,376.654,Excluded after point-on-surface audit
+Source extract,2024,RA,63,Şanlıurfa,Southeastern Anatolia,4,832.4227,Reassigned to Turkish province by point-on-surface
+Source extract,2024,RA,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,35,2678.0747,Excluded after point-on-surface audit
+Source extract,2024,SH,36,Kars,Eastern Anatolia,18,779.97034,Reassigned to Turkish province by point-on-surface
+Source extract,2024,SH,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,24,794.949,Excluded after point-on-surface audit
+Source extract,2025,A,22,Edirne,Marmara,6,25.769232,Reassigned to Turkish province by point-on-surface
+Source extract,2025,A,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,1,0.8063098,Excluded after point-on-surface audit
+Source extract,2025,AG,36,Kars,Eastern Anatolia,1,1.4011313,Reassigned to Turkish province by point-on-surface
+Source extract,2025,AG,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,1,0.35791048,Excluded after point-on-surface audit
+Source extract,2025,AR,30,Hakkâri,Eastern Anatolia,17,626.4183,Reassigned to Turkish province by point-on-surface
+Source extract,2025,AR,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,16,12.820682,Excluded after point-on-surface audit
+Source extract,2025,DA,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,1,0.0714638,Excluded after point-on-surface audit
+Source extract,2025,HA,47,Mardin,Southeastern Anatolia,20,448.59586,Reassigned to Turkish province by point-on-surface
+Source extract,2025,HA,63,Şanlıurfa,Southeastern Anatolia,2,675.1543,Reassigned to Turkish province by point-on-surface
+Source extract,2025,HA,73,Şırnak,Southeastern Anatolia,6,135.15138,Reassigned to Turkish province by point-on-surface
+Source extract,2025,HA,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,135,45039.58,Excluded after point-on-surface audit
+Source extract,2025,HL,31,Hatay,Mediterranean,2,314.7104,Reassigned to Turkish province by point-on-surface
+Source extract,2025,HL,63,Şanlıurfa,Southeastern Anatolia,4,624.2623,Reassigned to Turkish province by point-on-surface
+Source extract,2025,HL,79,Kilis,Southeastern Anatolia,8,69.84511,Reassigned to Turkish province by point-on-surface
+Source extract,2025,HL,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,83,4615.261,Excluded after point-on-surface audit
+Source extract,2025,ID,31,Hatay,Mediterranean,1,6.986375,Reassigned to Turkish province by point-on-surface
+Source extract,2025,ID,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,11,224.42343,Excluded after point-on-surface audit
+Source extract,2025,RA,63,Şanlıurfa,Southeastern Anatolia,6,2393.2156,Reassigned to Turkish province by point-on-surface
+Source extract,2025,RA,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,28,3033.281,Excluded after point-on-surface audit
+Source extract,2025,SH,36,Kars,Eastern Anatolia,28,1242.2388,Reassigned to Turkish province by point-on-surface
+Source extract,2025,SH,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,32,586.5139,Excluded after point-on-surface audit
+Source extract,2025,SJ,75,Ardahan,Eastern Anatolia,1,15.887597,Reassigned to Turkish province by point-on-surface
+Source extract,2025,SJ,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,3,472.53604,Excluded after point-on-surface audit
+After exact-WKB deduplication (no analyst area floor),2024,HL,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,11,288.81332,Excluded after point-on-surface audit
+After exact-WKB deduplication (no analyst area floor),2024,RA,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,1,30.125265,Excluded after point-on-surface audit
+After exact-WKB deduplication (no analyst area floor),2025,HA,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,1,0.023826607,Excluded after point-on-surface audit
+After exact-WKB deduplication (no analyst area floor),2025,HL,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,3,56.291023,Excluded after point-on-surface audit
+After exact-WKB deduplication (no analyst area floor),2025,RA,OUTSIDE_TR,Outside Türkiye by point-on-surface rule,Outside Türkiye,3,101.05301,Excluded after point-on-surface audit

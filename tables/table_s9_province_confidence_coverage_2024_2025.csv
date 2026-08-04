@@ -1,0 +1,163 @@
+layer,province_code,province_name,geographical_region,field_count,non_null_confidence_count,null_confidence_count,null_confidence_share_pct
+2024,01,Adana,Mediterranean,155203,151016,4187,2.697757130983293
+2024,02,Adıyaman,Southeastern Anatolia,229866,0,229866,100.0
+2024,03,Afyonkarahisar,Aegean,441090,0,441090,100.0
+2024,04,Ağrı,Eastern Anatolia,113964,0,113964,100.0
+2024,05,Amasya,Black Sea,185348,0,185348,100.0
+2024,06,Ankara,Central Anatolia,438635,0,438635,100.0
+2024,07,Antalya,Mediterranean,155925,0,155925,100.0
+2024,08,Artvin,Black Sea,98,0,98,100.0
+2024,09,Aydın,Aegean,111387,0,111387,100.0
+2024,10,Balıkesir,Marmara,173709,0,173709,100.0
+2024,11,Bilecik,Marmara,115894,0,115894,100.0
+2024,12,Bingöl,Eastern Anatolia,98064,0,98064,100.0
+2024,13,Bitlis,Eastern Anatolia,32869,0,32869,100.0
+2024,14,Bolu,Black Sea,126873,0,126873,100.0
+2024,15,Burdur,Mediterranean,256840,0,256840,100.0
+2024,16,Bursa,Marmara,248347,0,248347,100.0
+2024,17,Çanakkale,Marmara,112137,0,112137,100.0
+2024,18,Çankırı,Central Anatolia,208829,0,208829,100.0
+2024,19,Çorum,Black Sea,376911,0,376911,100.0
+2024,20,Denizli,Aegean,361165,0,361165,100.0
+2024,21,Diyarbakır,Southeastern Anatolia,293421,0,293421,100.0
+2024,22,Edirne,Marmara,181834,0,181834,100.0
+2024,23,Elazığ,Eastern Anatolia,305929,0,305929,100.0
+2024,24,Erzincan,Eastern Anatolia,148138,0,148138,100.0
+2024,25,Erzurum,Eastern Anatolia,185409,0,185409,100.0
+2024,26,Eskişehir,Central Anatolia,197624,0,197624,100.0
+2024,27,Gaziantep,Southeastern Anatolia,160222,0,160222,100.0
+2024,28,Giresun,Black Sea,59233,0,59233,100.0
+2024,29,Gümüşhane,Black Sea,73681,0,73681,100.0
+2024,30,Hakkâri,Eastern Anatolia,10469,0,10469,100.0
+2024,31,Hatay,Mediterranean,55067,5131,49936,90.68225979261626
+2024,32,Isparta,Mediterranean,228342,0,228342,100.0
+2024,33,Mersin,Mediterranean,156990,34609,122381,77.95464679278935
+2024,34,İstanbul,Marmara,49994,0,49994,100.0
+2024,35,İzmir,Aegean,184300,0,184300,100.0
+2024,36,Kars,Eastern Anatolia,145460,0,145460,100.0
+2024,37,Kastamonu,Black Sea,187849,0,187849,100.0
+2024,38,Kayseri,Central Anatolia,484238,79194,405044,83.64564532316753
+2024,39,Kırklareli,Marmara,163360,0,163360,100.0
+2024,40,Kırşehir,Central Anatolia,105059,0,105059,100.0
+2024,41,Kocaeli,Marmara,92758,0,92758,100.0
+2024,42,Konya,Central Anatolia,581781,0,581781,100.0
+2024,43,Kütahya,Aegean,377448,0,377448,100.0
+2024,44,Malatya,Eastern Anatolia,326211,0,326211,100.0
+2024,45,Manisa,Aegean,384468,0,384468,100.0
+2024,46,Kahramanmaraş,Mediterranean,242412,8138,234274,96.64290546672606
+2024,47,Mardin,Southeastern Anatolia,236822,0,236822,100.0
+2024,48,Muğla,Aegean,75015,0,75015,100.0
+2024,49,Muş,Eastern Anatolia,124467,0,124467,100.0
+2024,50,Nevşehir,Central Anatolia,198017,1993,196024,98.99352075831872
+2024,51,Niğde,Central Anatolia,151532,56007,95525,63.039490008711034
+2024,52,Ordu,Black Sea,1477,0,1477,100.0
+2024,53,Rize,Black Sea,0,0,0,
+2024,54,Sakarya,Marmara,128227,0,128227,100.0
+2024,55,Samsun,Black Sea,285558,0,285558,100.0
+2024,56,Siirt,Southeastern Anatolia,99167,0,99167,100.0
+2024,57,Sinop,Black Sea,36193,0,36193,100.0
+2024,58,Sivas,Central Anatolia,936628,0,936628,100.0
+2024,59,Tekirdağ,Marmara,166345,0,166345,100.0
+2024,60,Tokat,Black Sea,371176,0,371176,100.0
+2024,61,Trabzon,Black Sea,1715,0,1715,100.0
+2024,62,Tunceli,Eastern Anatolia,152200,0,152200,100.0
+2024,63,Şanlıurfa,Southeastern Anatolia,199080,0,199080,100.0
+2024,64,Uşak,Aegean,246924,0,246924,100.0
+2024,65,Van,Eastern Anatolia,98965,0,98965,100.0
+2024,66,Yozgat,Central Anatolia,491253,0,491253,100.0
+2024,67,Zonguldak,Black Sea,1041,0,1041,100.0
+2024,68,Aksaray,Central Anatolia,110209,0,110209,100.0
+2024,69,Bayburt,Black Sea,51967,0,51967,100.0
+2024,70,Karaman,Central Anatolia,113908,0,113908,100.0
+2024,71,Kırıkkale,Central Anatolia,160336,0,160336,100.0
+2024,72,Batman,Southeastern Anatolia,119606,0,119606,100.0
+2024,73,Şırnak,Southeastern Anatolia,51418,0,51418,100.0
+2024,74,Bartın,Black Sea,3154,0,3154,100.0
+2024,75,Ardahan,Eastern Anatolia,2218,0,2218,100.0
+2024,76,Iğdır,Eastern Anatolia,42484,0,42484,100.0
+2024,77,Yalova,Marmara,7159,0,7159,100.0
+2024,78,Karabük,Black Sea,31825,0,31825,100.0
+2024,79,Kilis,Southeastern Anatolia,59210,0,59210,100.0
+2024,80,Osmaniye,Mediterranean,50447,46856,3591,7.118361845104763
+2024,81,Düzce,Black Sea,9194,0,9194,100.0
+2025,01,Adana,Mediterranean,152288,152283,5,0.003283252784198361
+2025,02,Adıyaman,Southeastern Anatolia,219782,0,219782,100.0
+2025,03,Afyonkarahisar,Aegean,478453,0,478453,100.0
+2025,04,Ağrı,Eastern Anatolia,149159,0,149159,100.0
+2025,05,Amasya,Black Sea,207058,0,207058,100.0
+2025,06,Ankara,Central Anatolia,456893,0,456893,100.0
+2025,07,Antalya,Mediterranean,152555,0,152555,100.0
+2025,08,Artvin,Black Sea,423,0,423,100.0
+2025,09,Aydın,Aegean,91956,0,91956,100.0
+2025,10,Balıkesir,Marmara,213344,0,213344,100.0
+2025,11,Bilecik,Marmara,102316,0,102316,100.0
+2025,12,Bingöl,Eastern Anatolia,182854,0,182854,100.0
+2025,13,Bitlis,Eastern Anatolia,98836,0,98836,100.0
+2025,14,Bolu,Black Sea,111728,0,111728,100.0
+2025,15,Burdur,Mediterranean,252923,0,252923,100.0
+2025,16,Bursa,Marmara,231338,0,231338,100.0
+2025,17,Çanakkale,Marmara,130954,0,130954,100.0
+2025,18,Çankırı,Central Anatolia,204942,0,204942,100.0
+2025,19,Çorum,Black Sea,460626,0,460626,100.0
+2025,20,Denizli,Aegean,330728,0,330728,100.0
+2025,21,Diyarbakır,Southeastern Anatolia,433129,0,433129,100.0
+2025,22,Edirne,Marmara,161307,0,161307,100.0
+2025,23,Elazığ,Eastern Anatolia,485723,0,485723,100.0
+2025,24,Erzincan,Eastern Anatolia,118948,0,118948,100.0
+2025,25,Erzurum,Eastern Anatolia,54687,0,54687,100.0
+2025,26,Eskişehir,Central Anatolia,194133,0,194133,100.0
+2025,27,Gaziantep,Southeastern Anatolia,113208,0,113208,100.0
+2025,28,Giresun,Black Sea,82318,0,82318,100.0
+2025,29,Gümüşhane,Black Sea,50336,0,50336,100.0
+2025,30,Hakkâri,Eastern Anatolia,41624,0,41624,100.0
+2025,31,Hatay,Mediterranean,77876,6179,71697,92.06559145307925
+2025,32,Isparta,Mediterranean,233007,0,233007,100.0
+2025,33,Mersin,Mediterranean,120874,30268,90606,74.95904826513559
+2025,34,İstanbul,Marmara,55215,0,55215,100.0
+2025,35,İzmir,Aegean,167491,0,167491,100.0
+2025,36,Kars,Eastern Anatolia,137626,0,137626,100.0
+2025,37,Kastamonu,Black Sea,131029,0,131029,100.0
+2025,38,Kayseri,Central Anatolia,535619,102326,433293,80.89574865716115
+2025,39,Kırklareli,Marmara,157785,0,157785,100.0
+2025,40,Kırşehir,Central Anatolia,128819,0,128819,100.0
+2025,41,Kocaeli,Marmara,109298,0,109298,100.0
+2025,42,Konya,Central Anatolia,693938,0,693938,100.0
+2025,43,Kütahya,Aegean,341687,0,341687,100.0
+2025,44,Malatya,Eastern Anatolia,459392,0,459392,100.0
+2025,45,Manisa,Aegean,362768,0,362768,100.0
+2025,46,Kahramanmaraş,Mediterranean,259416,9078,250338,96.50060135072624
+2025,47,Mardin,Southeastern Anatolia,225838,0,225838,100.0
+2025,48,Muğla,Aegean,77938,0,77938,100.0
+2025,49,Muş,Eastern Anatolia,178593,0,178593,100.0
+2025,50,Nevşehir,Central Anatolia,239490,2549,236941,98.93565493340014
+2025,51,Niğde,Central Anatolia,157608,61439,96169,61.01784173392213
+2025,52,Ordu,Black Sea,1909,0,1909,100.0
+2025,53,Rize,Black Sea,0,0,0,
+2025,54,Sakarya,Marmara,118431,0,118431,100.0
+2025,55,Samsun,Black Sea,236491,0,236491,100.0
+2025,56,Siirt,Southeastern Anatolia,169943,0,169943,100.0
+2025,57,Sinop,Black Sea,26985,0,26985,100.0
+2025,58,Sivas,Central Anatolia,990904,0,990904,100.0
+2025,59,Tekirdağ,Marmara,143423,0,143423,100.0
+2025,60,Tokat,Black Sea,401411,0,401411,100.0
+2025,61,Trabzon,Black Sea,258,0,258,100.0
+2025,62,Tunceli,Eastern Anatolia,222533,0,222533,100.0
+2025,63,Şanlıurfa,Southeastern Anatolia,157757,0,157757,100.0
+2025,64,Uşak,Aegean,236069,0,236069,100.0
+2025,65,Van,Eastern Anatolia,112231,0,112231,100.0
+2025,66,Yozgat,Central Anatolia,598346,0,598346,100.0
+2025,67,Zonguldak,Black Sea,352,0,352,100.0
+2025,68,Aksaray,Central Anatolia,138851,0,138851,100.0
+2025,69,Bayburt,Black Sea,28417,0,28417,100.0
+2025,70,Karaman,Central Anatolia,111881,0,111881,100.0
+2025,71,Kırıkkale,Central Anatolia,165730,0,165730,100.0
+2025,72,Batman,Southeastern Anatolia,152696,0,152696,100.0
+2025,73,Şırnak,Southeastern Anatolia,70368,0,70368,100.0
+2025,74,Bartın,Black Sea,1428,0,1428,100.0
+2025,75,Ardahan,Eastern Anatolia,1095,0,1095,100.0
+2025,76,Iğdır,Eastern Anatolia,42174,0,42174,100.0
+2025,77,Yalova,Marmara,9874,0,9874,100.0
+2025,78,Karabük,Black Sea,19153,0,19153,100.0
+2025,79,Kilis,Southeastern Anatolia,47536,0,47536,100.0
+2025,80,Osmaniye,Mediterranean,46269,42938,3331,7.199204651062266
+2025,81,Düzce,Black Sea,6651,0,6651,100.0

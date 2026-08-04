@@ -1,0 +1,17 @@
+layer,section,measure_or_filter,documented_raw_threshold_equivalent,confidence_threshold,field_count,total_mapped_area_ha,median_field_area_ha,value,unit
+2024,Coverage,Cleaned mapped units,,,14139788.0,,,,count
+2024,Coverage,Non-null confidence,,,382944.0,,,2.708272570989042,% of layer
+2024,Coverage,Null confidence,,,13756844.0,,,97.29172742901096,% of layer
+2024,Distribution,Median non-null confidence,,,,,,91.84269714355469,0-100
+2024,Distribution,10th-90th percentile non-null confidence,,,,,,49.96-98.93,0-100
+2025,Coverage,Cleaned mapped units,,,15075042.0,,,,count
+2025,Coverage,Non-null confidence,,,407060.0,,,2.70022464945703,% of layer
+2025,Coverage,Null confidence,,,14667982.0,,,97.29977535054297,% of layer
+2025,Distribution,Median non-null confidence,,,,,,90.41697692871094,0-100
+2025,Distribution,10th-90th percentile non-null confidence,,,,,,38.35-98.89,0-100
+2024,Sensitivity,"Non-null confidence, unfiltered",,,382944.0,912546.3786885055,0.400032639503479,,
+2024,Sensitivity,conf >= 69 (raw >= 0.4),0.4,69.0,307668.0,742097.4822037666,0.5167699456214905,,
+2024,Sensitivity,conf >= 86 (raw >= 0.5),0.5,86.0,246750.0,688626.294226796,0.6599620580673218,,
+2025,Sensitivity,"Non-null confidence, unfiltered",,,407060.0,951041.1122448494,0.3576999008655548,,
+2025,Sensitivity,conf >= 69 (raw >= 0.4),0.4,69.0,304156.0,744520.9909028122,0.5316252112388611,,
+2025,Sensitivity,conf >= 86 (raw >= 0.5),0.5,86.0,241501.0,686818.64103983,0.691355288028717,,

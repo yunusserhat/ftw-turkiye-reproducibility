@@ -1,0 +1,3 @@
+layer,field_count,non_null_confidence_count,null_confidence_count,null_confidence_share_pct,min_non_null_confidence,p10_non_null_confidence,median_non_null_confidence,p90_non_null_confidence,max_non_null_confidence
+2024,14139788,382944,13756844,97.29172742901096,11.552222,49.957943,91.8427,98.93261,100.0
+2025,15075042,407060,14667982,97.29977535054297,7.669921,38.345432,90.41698,98.88746,100.0

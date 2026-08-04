@@ -1,0 +1,3 @@
+layer,hgm_primary_assigned_count,natural_earth_sensitivity_assigned_count,natural_earth_no_match_count_within_hgm_scope,same_province_code_count,different_province_code_count,different_code_share_of_dually_assigned_pct,interpretation
+2024,14139788,14124996,14792,13412536,712460,5.043966030149672,Boundary-framework sensitivity only; HGM-derived geometry remains primary and neither source is legally authoritative
+2025,15075042,15058136,16906,14286955,771181,5.1213576501102125,Boundary-framework sensitivity only; HGM-derived geometry remains primary and neither source is legally authoritative

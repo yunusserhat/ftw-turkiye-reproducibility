@@ -1,0 +1,7 @@
+layer,display_order,filter_label,documented_raw_threshold_equivalent,confidence_threshold,field_count,total_mapped_area_ha,median_field_area_ha
+2024,1,"Non-null confidence, unfiltered",,,382944,912546.3786885055,0.40003264
+2024,2,conf >= 69 (raw >= 0.4),0.4,69.0,307668,742097.4822037666,0.51676995
+2024,3,conf >= 86 (raw >= 0.5),0.5,86.0,246750,688626.294226796,0.65996206
+2025,1,"Non-null confidence, unfiltered",,,407060,951041.1122448494,0.3576999
+2025,2,conf >= 69 (raw >= 0.4),0.4,69.0,304156,744520.9909028122,0.5316252
+2025,3,conf >= 86 (raw >= 0.5),0.5,86.0,241501,686818.64103983,0.6913553

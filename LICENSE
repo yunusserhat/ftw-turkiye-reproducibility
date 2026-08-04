@@ -1,0 +1,52 @@
+Copyright (c) 2026 Yunus Serhat Bıçakçı
+
+The original documentation, manuscript text, authored tables, and authored
+figures in this repository are licensed under the Creative Commons Attribution
+4.0 International Licence (CC BY 4.0), except for the third-party material
+listed below.
+
+    https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt the material for any purpose, including
+commercially, provided you give appropriate credit, link to the licence, and
+indicate if changes were made.
+
+Analysis software is not licensed by this file. It is licensed separately under
+the GNU General Public License v3.0 in LICENSE-CODE, as declared in the code
+availability statement of the accompanying article.
+
+ATTRIBUTION
+
+Please cite the accompanying article and this repository, together with the
+Fields of The World product:
+
+  Bıçakçı, Y. S. A use-conditioned due-diligence protocol for open AI-derived
+  geospatial products: Application to Fields of The World in Türkiye.
+  Submitted to Earth Science Informatics.
+
+THIRD-PARTY MATERIAL
+
+The following are included for reproducibility and remain under their own terms:
+
+  - Natural Earth boundary extracts under data/external/ are public domain.
+    https://www.naturalearthdata.com/about/terms-of-use/
+  - The Turkish General Directorate of Mapping (HGM) area workbook, boundary
+    archive, derived HGM province GeoJSON, and face-level boundary ledgers are
+    NOT distributed in this repository. They retain the HGM source terms, which
+    describe the material as indicative rather than legally official, require
+    attribution, and permit free use and distribution outside commercial
+    activities. Their retrieval locations, SHA-256 identifiers and local
+    derivation instructions are given in data/external/README.md so that users
+    who accept the HGM terms can rebuild them.
+    https://www.harita.gov.tr/urun/turkiye-mulki-idare-sinirlari/232
+  - Analytical tables and figures that depend on HGM province assignment or HGM
+    area denominators are authored derivative results rather than HGM source
+    material, and are offered under the CC BY 4.0 grant above with HGM credited
+    as an input source. Reusers who need the underlying HGM material must obtain
+    it from HGM under its own terms. This statement records the rights position
+    of the repository and is not legal advice.
+  - The Fields of The World prediction product is distributed under CC BY 4.0
+    via Source Cooperative. https://source.coop/ftw/global-data
+  - Springer Nature LaTeX template files retain their publisher/LPPL notices,
+    are not covered by this repository licence, and are not redistributed here.
+    Obtain them from the publisher; see manuscript/TEMPLATE_PROVENANCE.md.

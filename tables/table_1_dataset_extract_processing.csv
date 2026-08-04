@@ -1,0 +1,40 @@
+section,characteristic,value,unit_or_note
+Dataset and extract,Product,Global Fields of The World (FTW) field-boundary predictions,
+Dataset and extract,Extract,ftw_turkiye.parquet,
+Dataset and extract,Immutable S3 version ID,xenG_6E1OYHASAduQdF4GQVAaWhx9Z.S,source object
+Dataset and extract,Raw byte length,5907043512,bytes
+Dataset and extract,Raw SHA-256,423c5e780d26c2bfc0a1c84bcf9b68029452be8a0e524a4395fde9c5d745774d,verified before analysis
+Dataset and extract,Data version,alpha,
+Dataset and extract,Access date,2026-07-18,
+Dataset and extract,Source row count,29258428,rows
+Dataset and extract,Expected row-count QC,True,
+Dataset and extract,Geometry CRS,OGC:CRS84,longitude-latitude
+Dataset and extract,Observed annual layer labels,2,distinct values
+Dataset and extract,Observed determination method,auto-imagery,
+Dataset and extract,Observed country code,TR,
+Dataset and extract,Distinct non-null subdivision codes,91,codes
+Dataset and extract,Valid Turkish province codes observed,80,of 81
+Dataset and extract,Expected Turkish province code absent,53,53 is Rize
+Dataset and extract,Alphabetic cross-border suffixes observed,11,audited before analysis
+Dataset and extract,Null subdivision-code rows,0,rows
+Dataset and extract,Minimum provider area,74.14147186279297,m²
+Dataset and extract,Maximum provider area,348952032.0,m²
+Dataset and extract,Minimum provider perimeter,34.81700134277344,m
+Dataset and extract,Maximum provider perimeter,867167.875,m
+Dataset and extract,Bounding-box extent,"25.691974, 35.838492, 44.787751, 42.104757","xmin, ymin, xmax, ymax in degrees"
+Dataset and extract,Licence,CC-BY-4.0,provider attribution
+Dataset and extract,Primary reporting geometry,HGM 2026 Türkiye Mülki İdare Sınırları-derived 81-province geometry,point-on-surface assignment; indicative/non-legal
+Dataset and extract,Primary reporting geometry SHA-256,ae7734d90958810fae9718322788e2932290a7b7f0a9ab2affca0b3938d8c51e,verified before assignment
+Dataset and extract,HGM-only derivation,"HGM boundary lines, settlement points, province-area workbook, and pinned face manifest",no external boundary geometry used for face selection or labelling
+Dataset and extract,HGM boundary source access date,2026-07-31,fixed; never derived from execution day
+Dataset and extract,HGM area-workbook access date,2026-07-18,fixed; never derived from execution day
+Dataset and extract,HGM derivation audit,57/130 country faces selected; 353 province faces; 81 province geometries,face- and component-level ledgers are hash-verified
+Dataset and extract,Natural Earth Admin-1 reference,"Natural Earth 1:10m Admin 1 – States, Provinces; source release label not supplied; archive SHA-256 efc59726337323058f9446210adc96673179cd344e053666ee3d28cb58ba2b05; Türkiye derivative SHA-256 18a5afb0feb78423953fd7d210842cf8876c12d8cbd811b4fe92e64de9275283; https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_1_states_provinces.zip; accessed 2026-07-18",assignment sensitivity only
+Processing,Source extract (2024),14161143,rows; 100.000% of source; area floor 0 m²
+Processing,Source extract (2025),15097285,rows; 100.000% of source; area floor 0 m²
+Processing,Area floor retained (≥ 0 m²) (2024),14161143,rows; 100.000% of source; area floor 0 m²
+Processing,Area floor retained (≥ 0 m²) (2025),15097285,rows; 100.000% of source; area floor 0 m²
+Processing,Exact-WKB duplicates removed (2024),14140752,rows; 99.856% of source; area floor 0 m²
+Processing,Exact-WKB duplicates removed (2025),15075815,rows; 99.858% of source; area floor 0 m²
+Processing,Reconciled Turkish province analysis scope (2024),14139788,rows; 99.849% of source; area floor 0 m²
+Processing,Reconciled Turkish province analysis scope (2025),15075042,rows; 99.853% of source; area floor 0 m²

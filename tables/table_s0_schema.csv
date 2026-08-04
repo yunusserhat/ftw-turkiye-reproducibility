@@ -1,0 +1,12 @@
+column_name,column_type,null,key,default,extra
+metrics:area,FLOAT,YES,,,
+metrics:perimeter,FLOAT,YES,,,
+id,VARCHAR,YES,,,
+determination:datetime,TIMESTAMP WITH TIME ZONE,YES,,,
+determination:method,VARCHAR,YES,,,
+geometry,GEOMETRY('OGC:CRS84'),YES,,,
+bbox,"STRUCT(xmin DOUBLE, ymin DOUBLE, xmax DOUBLE, ymax DOUBLE)",YES,,,
+admin:country_code,VARCHAR,YES,,,
+admin:subdivision_code,VARCHAR,YES,,,
+confidence,FLOAT,YES,,,
+layer,INTEGER,YES,,,

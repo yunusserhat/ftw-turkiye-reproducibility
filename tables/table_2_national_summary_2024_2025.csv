@@ -1,0 +1,22 @@
+section,metric,unit,2024,2025
+National summary,Mapped units,count,14139788.0,15075042.0
+National summary,Mapped area,ha,21079727.9683419,21529633.70308963
+National summary,10th percentile mapped-unit area,ha,0.015498167835175991,0.015311759896576405
+National summary,Median mapped-unit area,ha,0.21261639893054962,0.17424626648426056
+National summary,Mean mapped-unit area,ha,1.490809336628095,1.4281640942088007
+National summary,90th percentile mapped-unit area,ha,2.069389581680298,1.926551342010498
+National summary,Median perimeter,m,251.4828643798828,225.74819946289062
+National summary,Median shape index,ratio,1.477799958760217,1.4607816305242647
+National summary,Mean shape index,ratio,1.6370619460785247,1.6207268953294685
+Area threshold shares,Mapped-unit-count share below 0.1 ha,%,35.34140681600035,39.21577797262522
+Area threshold shares,Mapped-area share below 0.1 ha,%,0.9089133822754328,1.0371050333733602
+Area threshold shares,Mapped-unit-count share below 0.5 ha,%,67.6799821892662,70.47569088033055
+Area threshold shares,Mapped-area share below 0.5 ha,%,6.366385348590818,6.457091502261773
+Area threshold shares,Mapped-unit-count share below 1 ha,%,80.49110071522996,82.1153135095743
+Area threshold shares,Mapped-area share below 1 ha,%,12.491421200935154,12.259833478139246
+Area threshold shares,Mapped-unit-count share below 2 ha,%,89.65640078903587,90.34756254742109
+Area threshold shares,Mapped-area share below 2 ha,%,21.13058884787075,20.35800139622417
+Area threshold shares,Mapped-unit-count share below 5 ha,%,96.01366724875932,96.15895597504803
+Area threshold shares,Mapped-area share below 5 ha,%,34.215310755562555,32.88246346239188
+Area threshold shares,Mapped-unit-count share at or above 5 ha,%,3.986332751240681,3.8410440249519695
+Area threshold shares,Mapped-area share at or above 5 ha,%,65.78468924443744,67.11753653760812

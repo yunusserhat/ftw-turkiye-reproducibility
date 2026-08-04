@@ -1,0 +1,3 @@
+layer,unit_count,bbox_geometry_mismatch_count,maximum_xmin_difference_degrees,maximum_ymin_difference_degrees,maximum_xmax_difference_degrees,maximum_ymax_difference_degrees,tiled_union_use
+2024,14139788,0.0,0.0,0.0,0.0,0.0,Verified exact geometry envelope used to enumerate all intersected 0.1-degree tiles
+2025,15075042,0.0,0.0,0.0,0.0,0.0,Verified exact geometry envelope used to enumerate all intersected 0.1-degree tiles
