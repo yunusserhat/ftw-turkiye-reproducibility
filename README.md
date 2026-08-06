@@ -3,8 +3,7 @@
 Reproducibility materials for:
 
 > Bıçakçı, Y. S. A use-conditioned due-diligence protocol for open AI-derived geospatial
-> products: Application to Fields of The World in Türkiye. *Submitted to Earth Science
-> Informatics.*
+> products: Application to Fields of The World in Türkiye. Submitted to *Discover Geoscience* in August 2026.
 
 Department of Artificial Intelligence and Machine Learning, Faculty of Applied Sciences,
 Marmara University, Istanbul, Türkiye.
