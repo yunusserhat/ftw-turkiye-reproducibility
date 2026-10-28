@@ -20,9 +20,9 @@ ATTRIBUTION
 Please cite the accompanying article and this repository, together with the
 Fields of The World product:
 
-  Bıçakçı, Y. S. A use-conditioned due-diligence protocol for open AI-derived
-  geospatial products: Application to Fields of The World in Türkiye.
-  Submitted to Earth Science Informatics.
+  Bıçakçı, Y. S. A due diligence protocol for open geospatial products derived
+  by artificial intelligence applied to Fields of The World in Türkiye.
+  Submitted to Discover Geoscience.
 
 THIRD-PARTY MATERIAL
 
@@ -47,6 +47,3 @@ The following are included for reproducibility and remain under their own terms:
     of the repository and is not legal advice.
   - The Fields of The World prediction product is distributed under CC BY 4.0
     via Source Cooperative. https://source.coop/ftw/global-data
-  - Springer Nature LaTeX template files retain their publisher/LPPL notices,
-    are not covered by this repository licence, and are not redistributed here.
-    Obtain them from the publisher; see manuscript/TEMPLATE_PROVENANCE.md.

@@ -7,14 +7,24 @@ umask 022
 # Build a deterministic, rights-minimised review snapshot.  In addition to the
 # 5.9 GB FTW input and analysis caches, this archive deliberately excludes HGM
 # source/derived geometry and any obsolete auxiliary boundary-audit geometry.
-# HGM identifiers and lawful local-derivation instructions remain in the included
-# documentation; the source/derived files require separate rights clearance.
+# HGM permits non-commercial distribution with attribution, but its files and the
+# geometry derived from them are not redistributed.  HGM identifiers and local-
+# derivation instructions remain in the included documentation.  Outputs added in
+# the first revision are indexed by their own manifest and validated alongside the
+# original one, which is left unchanged.  The article itself is held by the journal and
+# is not packaged.
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
-SNAPSHOT_VERSION="${FTW_SNAPSHOT_VERSION:-2026-08-01-r1}"
+SNAPSHOT_VERSION="${FTW_SNAPSHOT_VERSION:-2026-10-28-r2}"
+SNAPSHOT_MTIME="${FTW_SNAPSHOT_MTIME:-UTC 2026-10-28 00:00:00}"
+REVISION_MANIFEST="tables/artifact_manifest_revision1.csv"
 if [[ ! "${SNAPSHOT_VERSION}" =~ ^[A-Za-z0-9][A-Za-z0-9._-]*$ || \
       "${SNAPSHOT_VERSION}" == *'..'* ]]; then
     printf 'Unsafe snapshot version: %s\n' "${SNAPSHOT_VERSION}" >&2
+    exit 1
+fi
+if [[ ! "${SNAPSHOT_MTIME}" =~ ^UTC\ [0-9]{4}-[0-9]{2}-[0-9]{2}\ [0-9]{2}:[0-9]{2}:[0-9]{2}$ ]]; then
+    printf 'Unexpected snapshot timestamp: %s\n' "${SNAPSHOT_MTIME}" >&2
     exit 1
 fi
 RELEASE_DIR="${PROJECT_ROOT}/release"
@@ -63,10 +73,12 @@ for required_path in \
     figures/fig_2_spatial_patterns_2024.pdf \
     figures/fig_3_confidence_2024_2025.pdf \
     figures/fig_4_cross_layer_consistency_2024_2025.pdf \
-    manuscript/ftw_turkiye.pdf \
-    manuscript/ftw_turkiye.tex manuscript/sn-bibliography.bib \
-    manuscript/sn-jnl.cls manuscript/bst/sn-basic.bst \
-    manuscript/TEMPLATE_PROVENANCE.md manuscript/supplementary_material.md; do
+    "${REVISION_MANIFEST}" tables/table_r1_example_sites.csv \
+    figures/fig_r1_protocol_workflow.pdf figures/fig_r1_study_area.pdf \
+    figures/fig_r1_ftw_multiscale.pdf figures/fig_r1_visual_examples.pdf \
+    figures/src/fig_r1_protocol_workflow.tex \
+    scripts/make_revision_figures.py scripts/requirements-revision-figures.txt \
+    supplementary_material.md; do
     require_path "${required_path}"
 done
 
@@ -119,6 +131,12 @@ validate_artifact_manifest() {
         listed["${relative_path}"]=1
     done < <(tail -n +2 "${manifest}")
 
+    # Revision outputs are checked against their own manifest by validate_revision_manifest.
+    listed["${REVISION_MANIFEST}"]=1
+    while IFS= read -r relative_path; do
+        listed["${relative_path}"]=1
+    done < <(revision_manifest_paths "${validation_root}")
+
     while IFS= read -r -d '' candidate; do
         candidate_relative="${candidate#${validation_root}/}"
         if [[ -z "${listed[${candidate_relative}]+x}" ]]; then
@@ -133,6 +151,56 @@ validate_artifact_manifest() {
             \( -name '*.png' -o -name '*.pdf' \) -print0
         printf '%s\0' "${validation_root}/protocol/ftw_turkiye_decision_record.json"
     )
+}
+
+revision_manifest_paths() {
+    python - "$1/${REVISION_MANIFEST}" <<'PY'
+import csv
+import sys
+
+with open(sys.argv[1], newline="", encoding="utf-8") as stream:
+    for row in csv.DictReader(stream):
+        print(row["path"])
+PY
+}
+
+validate_revision_manifest() {
+    local validation_root="$1"
+    python - "${validation_root}" "${REVISION_MANIFEST}" <<'PY'
+import csv
+import hashlib
+import re
+import sys
+from pathlib import Path
+
+root = Path(sys.argv[1]).resolve()
+with (root / sys.argv[2]).open(newline="", encoding="utf-8") as stream:
+    reader = csv.DictReader(stream)
+    expected = ["path", "size_bytes", "sha256", "generated_by", "generator_sha256", "inputs"]
+    if reader.fieldnames != expected:
+        raise SystemExit(f"Unexpected revision-manifest schema: {reader.fieldnames}")
+    rows = list(reader)
+if not rows:
+    raise SystemExit("Revision manifest has no data rows")
+
+allowed_outputs = re.compile(r"figures/fig_r1_[a-z0-9_]+\.(?:png|pdf)|tables/table_r1_[a-z0-9_]+\.csv")
+generators = {"scripts/make_revision_figures.py", "figures/src/fig_r1_protocol_workflow.tex"}
+for row in rows:
+    relative_path = row["path"]
+    if not allowed_outputs.fullmatch(relative_path):
+        raise SystemExit(f"Unsafe or unexpected revision-manifest path: {relative_path}")
+    artifact = root / relative_path
+    if not artifact.is_file():
+        raise SystemExit(f"Revision manifest references a missing file: {relative_path}")
+    if (str(artifact.stat().st_size) != row["size_bytes"]
+            or hashlib.sha256(artifact.read_bytes()).hexdigest() != row["sha256"]):
+        raise SystemExit(f"Revision artifact differs from its manifest entry: {relative_path}")
+    generator = row["generated_by"].removesuffix(" (pdflatex)")
+    if generator not in generators:
+        raise SystemExit(f"Unexpected revision generator: {row['generated_by']}")
+    if hashlib.sha256((root / generator).read_bytes()).hexdigest() != row["generator_sha256"]:
+        raise SystemExit(f"Revision generator differs from its manifest entry: {generator}")
+PY
 }
 
 validate_manifest_provenance() {
@@ -245,30 +313,11 @@ PY
 
 validate_artifact_manifest "${PROJECT_ROOT}"
 validate_manifest_provenance "${PROJECT_ROOT}"
+validate_revision_manifest "${PROJECT_ROOT}"
 
-if find "${PROJECT_ROOT}/tables" "${PROJECT_ROOT}/figures" \
-    "${PROJECT_ROOT}/protocol/ftw_turkiye_decision_record.json" \
-    -type f -newer "${PROJECT_ROOT}/tables/artifact_manifest.csv" \
-    ! -path "${PROJECT_ROOT}/tables/artifact_manifest.csv" -print -quit \
-    | grep -q .; then
-    printf 'Generated outputs are newer than artifact_manifest.csv; rerun the notebook.\n' >&2
-    exit 1
-fi
-
-for manuscript_dependency in \
-    manuscript/ftw_turkiye.tex manuscript/sn-bibliography.bib \
-    manuscript/sn-jnl.cls manuscript/bst/sn-basic.bst \
-    figures/fig_1_national_area_distribution.pdf \
-    figures/fig_2_spatial_patterns_2024.pdf \
-    figures/fig_3_confidence_2024_2025.pdf \
-    figures/fig_4_cross_layer_consistency_2024_2025.pdf; do
-    if [[ "${PROJECT_ROOT}/${manuscript_dependency}" \
-          -nt "${PROJECT_ROOT}/manuscript/ftw_turkiye.pdf" ]]; then
-        printf 'Compiled manuscript PDF is stale relative to: %s\n' \
-            "${manuscript_dependency}" >&2
-        exit 1
-    fi
-done
+# Generated outputs are judged stale by their content.  Every listed output has just
+# been checked against its SHA-256 and any unlisted output is refused.  Modification
+# times are not used because a fresh clone gives every file a new one.
 
 copy_path() {
     local relative_path="$1"
@@ -279,24 +328,27 @@ copy_path() {
 }
 
 for relative_path in \
-    README.md LICENSE LICENSE-CODE requirements.txt requirements-lock.txt environment.yml \
+    README.md LICENSE LICENSE-CODE supplementary_material.md \
+    requirements.txt requirements-lock.txt environment.yml \
     ftw_turkiye_eda.ipynb helpers.py data/download_tr.sh \
     data/raw/ftw_catalog_summary.json data/external/README.md \
     data/external/ne10m_turkiye_boundary_wgs84.geojson \
     data/external/ne_10m_admin_1_turkiye.geojson \
     protocol/README.md protocol/protocol_decision_record.schema.json \
     scripts/build_review_snapshot.sh scripts/prepare_hgm_provinces.py \
-    tables/artifact_manifest.csv \
-    manuscript/ftw_turkiye.tex manuscript/ftw_turkiye.pdf \
-    manuscript/sn-bibliography.bib manuscript/TEMPLATE_PROVENANCE.md \
-    manuscript/supplementary_material.md \
-    manuscript/revision_change_log.md; do
+    scripts/make_revision_figures.py scripts/requirements-revision-figures.txt \
+    figures/src/fig_r1_protocol_workflow.tex \
+    tables/artifact_manifest.csv "${REVISION_MANIFEST}"; do
     copy_path "${relative_path}"
 done
 
 while IFS=, read -r relative_path _; do
     copy_path "${relative_path}"
 done < <(tail -n +2 "${PROJECT_ROOT}/tables/artifact_manifest.csv")
+
+while IFS= read -r relative_path; do
+    copy_path "${relative_path}"
+done < <(revision_manifest_paths "${PROJECT_ROOT}")
 
 # Fail closed if a future edit accidentally adds a restricted boundary payload.
 for restricted_basename in \
@@ -318,6 +370,7 @@ done
 
 validate_artifact_manifest "${STAGING_ROOT}"
 validate_manifest_provenance "${STAGING_ROOT}"
+validate_revision_manifest "${STAGING_ROOT}"
 
 find "${STAGING_ROOT}" -type f \
     ! -name 'SNAPSHOT_MANIFEST.sha256' -print0 \
@@ -332,13 +385,14 @@ find "${STAGING_ROOT}" -type f \
 )
 
 tar --sort=name \
-    --mtime='UTC 2026-08-01 00:00:00' \
+    --mtime="${SNAPSHOT_MTIME}" \
     --owner=0 --group=0 --numeric-owner \
     --mode='u+rwX,go+rX,go-w' \
     -C "${STAGING_DIR}" \
     -cf - "$(basename "${STAGING_ROOT}")" \
     | gzip -n > "${ARCHIVE_PATH}"
 
-sha256sum "${ARCHIVE_PATH}" > "${ARCHIVE_PATH}.sha256"
+# The sidecar names the archive without a directory so that it verifies wherever both are copied.
+(cd "${RELEASE_DIR}" && sha256sum "${ARCHIVE_NAME}" > "${ARCHIVE_NAME}.sha256")
 printf 'Created %s\n' "${ARCHIVE_PATH}"
 cat "${ARCHIVE_PATH}.sha256"

@@ -1,9 +1,13 @@
-# A use-conditioned due-diligence protocol for open AI-derived geospatial products: Application to Fields of The World in Türkiye
+# A due diligence protocol for open geospatial products derived by artificial intelligence applied to Fields of The World in Türkiye
 
 Reproducibility materials for:
 
-> Bıçakçı, Y. S. A use-conditioned due-diligence protocol for open AI-derived geospatial
-> products: Application to Fields of The World in Türkiye. Submitted to *Discover Geoscience* in August 2026.
+> Bıçakçı, Y. S. A due diligence protocol for open geospatial products derived by artificial
+> intelligence applied to Fields of The World in Türkiye. Submitted to *Discover Geoscience* in
+> August 2026 and revised in October 2026.
+
+The article was submitted under the title "A use-conditioned due-diligence protocol for open
+AI-derived geospatial products: Application to Fields of The World in Türkiye".
 
 Department of Artificial Intelligence and Machine Learning, Faculty of Applied Sciences,
 Marmara University, Istanbul, Türkiye.
@@ -16,16 +20,15 @@ redistribute third-party source material. The Turkish General Directorate of Map
 boundary archive, area workbook, derived province geometry and face-level ledgers are excluded
 because HGM permits attributed, non-commercial reuse of material it describes as indicative
 rather than legally official. The 5.9 GB Fields of The World country partition and the derived
-analysis caches are excluded because of their size. The Springer Nature LaTeX class and
-bibliography styles are excluded because they retain their own publisher notices. In each case
-the retrieval location, immutable identifier and local derivation instructions are documented,
-in `data/external/README.md` and `manuscript/TEMPLATE_PROVENANCE.md`, so that the analysis can
-be rebuilt by anyone who obtains those inputs under their own terms.
+analysis caches are excluded because of their size. In each case the retrieval location,
+immutable identifier and local derivation instructions are documented in
+`data/external/README.md`, so that the analysis can be rebuilt by anyone who obtains those
+inputs under their own terms. The article itself is held by the journal and is not part of this
+repository.
 
 `ftw_turkiye_eda.ipynb` is the top-level executable workflow. Its calculations also use
 `helpers.py`, the pinned inputs and the documented HGM preparation script; generated CSVs are
-the authoritative source for numbers reported in the article. The manuscript source is in
-`manuscript/ftw_turkiye.tex`.
+the authoritative source for numbers reported in the article.
 
 ## Licences
 
@@ -33,12 +36,15 @@ The analysis code is licensed under the GNU General Public License v3.0; see
 [`LICENSE-CODE`](LICENSE-CODE). Project documentation and authored tables and figures are
 CC BY 4.0; see [`LICENSE`](LICENSE).
 The upstream FTW data remain CC BY 4.0, and every third-party input described under
-`data/external/` retains its own terms. The HGM boundary product is attribution-required,
-non-commercial and indicative rather than legally official, and is not redistributed here.
-Natural Earth is public domain; it is used as an independent generalized-boundary sensitivity
-and for figure display only. Published figures contain no HGM-derived boundary geometry,
-although some plotted values use HGM assignment or HGM area denominators and credit HGM
-accordingly.
+`data/external/` retains its own terms. HGM publishes its boundary product and province-area
+workbook free of charge and permits their use and distribution outside commercial activities
+with attribution. It describes both as indicative and without legal official status. Neither is
+redistributed here. Natural Earth is public domain; it is used as an independent
+generalized-boundary sensitivity and for figure display only. Published figures contain no
+HGM-derived boundary geometry, although some plotted values use HGM assignment or HGM area
+denominators and credit HGM accordingly. The tables that contain HGM-derived values are listed
+in Section S8.5 of `supplementary_material.md`. Those values remain subject to HGM's
+terms, which the repository licences do not replace.
 
 ## Scope
 
@@ -64,7 +70,10 @@ raw-probability field.
 Robinson et al. (2026) describes a three-class argmax followed by connected components for
 field extraction; the Source Cooperative README instead describes thresholding softmax output
 before polygonisation. The notebook pins both, records the unresolved ambiguity, and
-characterises the polygons as distributed.
+characterises the polygons as distributed. The input compositing is also described
+inconsistently. The paper sets the planting and harvest windows from WorldCereal crop calendars, whereas
+the pinned feature catalogue describes latitude-based day-of-year windows (Section S11.4 of
+`supplementary_material.md`).
 
 ## Reproduce
 
@@ -85,11 +94,6 @@ As a convenience alternative, Conda users may run:
 pip installation. `environment.yml` pins the direct Conda dependencies but is not a transitive
 `conda-lock` file, so the two installation paths are not claimed to have identical solver
 resolutions.
-
-Compiling the manuscript source additionally requires the official Springer Nature
-`sn-jnl.cls` and `sn-basic.bst` files. They are publisher-template inputs, not project
-outputs, and are documented rather than redistributed; see
-`manuscript/TEMPLATE_PROVENANCE.md`.
 
 Lawfully obtain the external administrative inputs described in
 `data/external/README.md`, including the HGM boundary archive and area workbook, and run
@@ -139,6 +143,9 @@ Four main figures and one supplementary diagnostic, each as PNG and PDF:
 4. Province-level cross-layer correspondence.
 5. Supplementary outline audit of the four largest mapped units in each layer.
 
+File numbers predate the revised article, so figures 1–4 above are article Figs. 4, 6, 7 and 8.
+Article Figs. 1, 2, 3 and 5 are the revision figures described below.
+
 Five main tables: dataset and processing characteristics; national summary and
 area-threshold shares; complete province metrics; both-layer confidence coverage and
 sensitivity; cross-layer consistency.
@@ -162,17 +169,57 @@ self-referential hash. The 38,833-byte manifest has SHA-256
 `bb43f0c9e7e1a196e89eed0839d29b615dff0988263aa2fd0ea78dab7cbbf957`; an independent check
 matched all 80 paths, sizes and hashes.
 
-The snapshot builder is tested on Linux with Bash 4 or newer, GNU tar and GNU coreutils.
-It normalises locale, time zone, permissions, ownership, path order and timestamps; validates
-the analytical artifact manifest and its code/input provenance; refuses a running notebook or
-stale manuscript PDF; and verifies the internal snapshot manifest before writing the archive.
-The final `ftw-turkiye-review-snapshot-2026-08-01-r1.tar.gz` passed two consecutive
-byte-identity builds; its external `.sha256` sidecar records the release digest without
-creating a self-reference inside the archive.
+### Figures added in the first revision
+
+`scripts/make_revision_figures.py` builds the study-area map, the multiscale figure of model
+inputs and outputs, and the visual examples. It reads the pinned GeoParquet (and verifies its
+SHA-256), the tables above, Natural Earth, and windows of two Zarr V3 stores that Fields of The
+World publishes under CC BY 4.0. One store holds the Sentinel-2 planting and harvest composites
+(`features/zarr/alpha/global.zarr`) and the other the PRUE class probabilities
+(`predictions/zarr/alpha/global.zarr`). The example sites are chosen by deterministic rules,
+which are recorded together with the SHA-256 of every data window in
+`tables/table_r1_example_sites.csv`. The protocol workflow diagram is drawn in TikZ
+(`figures/src/fig_r1_protocol_workflow.tex`). All revision outputs are indexed in
+`tables/artifact_manifest_revision1.csv`, and the original manifest above is unchanged.
+
+    python -m pip install -r scripts/requirements-revision-figures.txt
+    bash data/download_tr.sh
+    (cd figures/src && pdflatex fig_r1_protocol_workflow.tex && cp fig_r1_protocol_workflow.pdf ..)
+    python scripts/make_revision_figures.py
+
+The diagram is compiled first because the script also lists it in the revision manifest. The
+remote stores are versioned only by data release (alpha), so the cached window digests are the
+record of exactly which values were plotted. The figures are visual illustrations and do
+not constitute an accuracy assessment. Section S11 of `supplementary_material.md` gives the sources,
+the site-selection rules and the documentation discrepancy found while preparing them.
+
+### Review snapshot (Online Resource 1)
+
+`scripts/build_review_snapshot.sh` writes a deterministic, rights-minimised archive of this
+repository to `release/`. It is tested on Linux with Bash 4 or newer, GNU tar and GNU
+coreutils. It normalises locale, time zone, permissions, ownership, path order and timestamps.
+It also validates both artifact manifests and the code and input provenance, stops if the
+notebook is still running, and verifies the internal snapshot manifest before writing the
+archive. Staleness of generated outputs is decided by their SHA-256 digests. Modification times
+are not used because a fresh clone resets them.
+
+    bash scripts/build_review_snapshot.sh
+
+The snapshot submitted with the original manuscript,
+`ftw-turkiye-review-snapshot-2026-08-01-r1.tar.gz`, passed two consecutive byte-identity
+builds. The revised snapshot, `ftw-turkiye-review-snapshot-2026-10-28-r2.tar.gz`, adds the
+revision figures, their script and the two revision tables. Unlike the first snapshot, it does
+not contain the manuscript. It also passed two consecutive byte-identity builds. Each archive's external `.sha256` sidecar records its release digest
+without creating a self-reference inside the archive.
 
 ## Data sources
 
 - FTW Global Data alpha, Source Cooperative, CC BY 4.0 — https://source.coop/ftw/global-data
+- FTW Sentinel-2 planting and harvest composites and PRUE class probabilities (Zarr, CC BY 4.0,
+  used only for the revision figures) at
+  https://data.source.coop/ftw/global-data/features/zarr/alpha/global.zarr and
+  https://data.source.coop/ftw/global-data/predictions/zarr/alpha/global.zarr. Contains modified
+  Copernicus Sentinel data.
 - Provider catalog metadata (vector-confidence semantics) — https://data.source.coop/ftw/global-data/catalog.json
 - Provider README — https://data.source.coop/ftw/global-data/README.md
 - Natural Earth Admin 1, public domain — https://www.naturalearthdata.com
@@ -186,14 +233,15 @@ Guide, together with the Source Cooperative product documentation.
 
 ## Layout
 
-    ftw_turkiye_eda.ipynb   analysis and output generator
-    helpers.py              geometry, grid, concordance, and XLSX helpers
-    manuscript/             article source and supplementary material
-    protocol/               JSON Schema and validated FTW decision record
-    scripts/                HGM preparation and review-snapshot helpers
-    data/download_tr.sh     immutable country-partition download helper
-    data/external/          Natural Earth extracts and third-party input provenance
-    data/raw/               large immutable FTW extract (gitignored)
-    data/interim/           content-fingerprinted analysis caches (gitignored)
-    figures/                generated figures
-    tables/                 generated tables and the SHA-256 artifact manifest
+    ftw_turkiye_eda.ipynb      analysis and output generator
+    helpers.py                 geometry, grid, concordance, and XLSX helpers
+    supplementary_material.md  supplementary material (Sections S1–S11)
+    protocol/                  JSON Schema and validated FTW decision record
+    scripts/                   HGM preparation, review-snapshot and revision-figure helpers
+    data/download_tr.sh        immutable country-partition download helper
+    data/external/             Natural Earth extracts and third-party input provenance
+    data/raw/                  large immutable FTW extract (gitignored)
+    data/interim/              content-fingerprinted analysis caches (gitignored)
+    figures/                   generated figures
+    figures/src/               TikZ source of the workflow diagram
+    tables/                    generated tables and the SHA-256 artifact manifest
